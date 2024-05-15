@@ -1,7 +1,4 @@
 # 数据库初始化
-# @author <a href="https://github.com/liyupi">程序员鱼皮</a>
-# @from <a href="https://yupi.icu">编程导航知识星球</a>
-
 -- 创建库
 create database if not exists sanikki_search;
 
@@ -26,6 +23,17 @@ create table if not exists user
     index idx_unionId (unionId)
 ) comment '用户' collate = utf8mb4_unicode_ci;
 
+-- 插入第四条用户数据
+INSERT INTO user (userAccount, userPassword, userName, userAvatar, userProfile, userRole)
+VALUES ('张三', 'zhangsan_password', '张三', 'https://example.com/avatar/zhangsan.jpg', '喜欢旅行和摄影。', 'user');
+
+-- 插入第五条用户数据
+INSERT INTO user (userAccount, userPassword, userName, userAvatar, userProfile, userRole)
+VALUES ('李四', 'lisi_password', '李四', 'https://example.com/avatar/lisi.jpg', '热爱美食和健身。', 'user');
+
+-- 插入第六条用户数据
+INSERT INTO user (userAccount, userPassword, userName, userAvatar, userProfile, userRole)
+VALUES ('王五', 'wangwu_password', '王五', 'https://example.com/avatar/wangwu.jpg', '对艺术和音乐感兴趣。', 'user');
 -- 帖子表
 create table if not exists post
 (
