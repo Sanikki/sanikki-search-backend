@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- * @ClassName
+ * @ClassName 图片接口
  * @Description: TODO
  * @Author: Sanikki
  * @Date: 2024/5/15

@@ -1,6 +1,7 @@
 package com.sanikki.searchbackend.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.sanikki.searchbackend.model.dto.user.UserQueryRequest;
 import com.sanikki.searchbackend.model.entity.User;
@@ -116,5 +117,12 @@ public interface UserService extends IService<User> {
      * @return
      */
     QueryWrapper<User> getQueryWrapper(UserQueryRequest userQueryRequest);
+
+    /**
+     * 分页获取用户视图
+     * @param userQueryRequest
+     * @return
+     */
+    Page<UserVO> listUserVOByPage(UserQueryRequest userQueryRequest);
 
 }
